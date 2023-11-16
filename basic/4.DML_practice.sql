@@ -16,5 +16,17 @@ insert into post(id) values(4);
 insert into post(id, author_id) values(5,10); --에러
 
 -- 3번) author 데이터 중 id가 4인 데이터를 email을 abc@naver.com, name을 abc로 변경
+update author set email='abc@naver.com', name='abc' where id=1;
+
+
 -- post에 글쓴적 없는 author 데이터를 1개 삭제
+DELETE FROM author WHERE id=2;
+
+
 -- post에 글쓴적 있는 author 데이터 1개 삭제 -> 에러 -> 삭제조치
+-- 방법 1
+DELETE FROM  post WHERE author_id=4; 
+delete from author where id =2;
+-- 방법 2
+update post set author_id = nill where author_id = 2;
+delete from author where id = 2;
