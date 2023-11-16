@@ -40,6 +40,7 @@ SELECT * FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE TABLE_NAME = 'posts';
 -- 인덱스 조회
 SHOW INDEX FROM posts;
 
+-- ALTER 문
 -- 테이블 이름 변경
 ALTER TABLE posts RENAME post;
 
@@ -50,7 +51,7 @@ ALTER TABLE author ADD COLUMN role VARCHAR(50);
 ALTER TABLE author MODIFY COLUMN name VARCHAR(100) NOT NULL;
 
 -- 컬럼 이름변경
-ALTER TABLE post CHANGE COLUMN content contents VARCHAR(255) NOT NULL;
+ALTER TABLE post CHANGE COLUMN content contents VARCHAR(255);
 
 -- 컬럼 삭제
 ALTER TABLE author DROP COLUMN test1;
