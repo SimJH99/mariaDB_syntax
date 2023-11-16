@@ -46,7 +46,7 @@ ALTER TABLE posts RENAME post;
 -- 컬럼추가
 ALTER TABLE author ADD COLUMN role VARCHAR(50);
 
--- 필드타입변경
+-- 필드타입변경 (덮어쓰기)
 ALTER TABLE author MODIFY COLUMN name VARCHAR(100) NOT NULL;
 
 -- 컬럼 이름변경
@@ -54,4 +54,3 @@ ALTER TABLE post CHANGE COLUMN content contents VARCHAR(255) NOT NULL;
 
 -- 컬럼 삭제
 ALTER TABLE author DROP COLUMN test1;
-
