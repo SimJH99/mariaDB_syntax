@@ -6,5 +6,3 @@ USE board;
 
 -- 테이블 신규생성
 CREATE TABLE author;
-
-sdfawef
