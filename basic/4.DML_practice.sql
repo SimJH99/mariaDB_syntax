@@ -13,3 +13,4 @@ insert into post(id, author_id) values(1,1);
 insert into post(id, author_id) values(2,2);
 insert into post(id) values(3);
 insert into post(id) values(4);
+insert into post(id, author_id) values(5,10); --에러
