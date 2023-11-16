@@ -33,3 +33,25 @@ SHOW CREATE TABLE posts;
 --    CONSTRAINT `posts_ibfk_1` FOREIGN KEY (`author_id`) REFERENCES `author` (`id`)
 --  ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci
 
+
+-- 테이블 제약 조건 조회
+SELECT * FROM INFORMATION_SCHEMA.KEY_COLUMN_USAGE WHERE TABLE_NAME = 'posts';
+
+-- 인덱스 조회
+SHOW INDEX FROM posts;
+
+-- 테이블 이름 변경
+ALTER TABLE posts RENAME post;
+
+-- 컬럼추가
+ALTER TABLE author ADD COLUMN role VARCHAR(50);
+
+-- 필드타입변경
+ALTER TABLE author MODIFY COLUMN name VARCHAR(100) NOT NULL;
+
+-- 컬럼 이름변경
+ALTER TABLE post CHANGE COLUMN content contents VARCHAR(255) NOT NULL;
+
+-- 컬럼 삭제
+ALTER TABLE author DROP COLUMN test1;
+
