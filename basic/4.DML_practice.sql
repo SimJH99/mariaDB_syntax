@@ -14,3 +14,7 @@ insert into post(id, author_id) values(2,2);
 insert into post(id) values(3);
 insert into post(id) values(4);
 insert into post(id, author_id) values(5,10); --에러
+
+-- 3번) author 데이터 중 id가 4인 데이터를 email을 abc@naver.com, name을 abc로 변경
+-- post에 글쓴적 없는 author 데이터를 1개 삭제
+-- post에 글쓴적 있는 author 데이터 1개 삭제 -> 에러 -> 삭제조치
