@@ -10,7 +10,7 @@ insert into author(id, name) values(5, 'sim');
 -- 2개는 저자가 비어있는 데이터 -> author_id에 NOT NULL 조건없다는 사실 확인
 --  1개는 저자가 author 테이블에 없는 데이터 추가 -> 에러발생 확인
 insert into post(id, author_id) values(1,1);
-insert into post(id, author_id) values(2,2);
+insert into post(id, autho  r_id) values(2,2);
 insert into post(id) values(3);
 insert into post(id) values(4);
 insert into post(id, author_id) values(5,10); --에러
