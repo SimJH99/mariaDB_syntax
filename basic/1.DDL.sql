@@ -17,7 +17,7 @@ DESCRIBE author;
 -- post 테이블 신규생성
 CREATE TABLE posts(id INT PRIMARY KEY, title VARCHAR(255), content VARCHAR(255), author_id INT, FOREIGN KEY(author_id) REFERENCES author(id));
 
--- 테이블 컴럼 상세 조회
+-- 테이블 컬럼 상세 조회
 SHOW FULL columns from author;
 
 -- 테이블 생성문 조회
