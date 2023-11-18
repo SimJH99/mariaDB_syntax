@@ -20,7 +20,10 @@ SELECT * FROM author WHERE id > 10 AND name = 'abc';
 SELECT DISTINCT name FROM author;
 
 -- ORDER BY (정렬)
-SELECT * FROM author ORDER BY name desc;
+SELECT * FROM author ORDER BY name ASC;
+
+-- ORDER BY (내림차순 정렬)
+SELECT * FROM author ORDER BY name DESC;
 
 -- ORDER BY 멀티 : 먼저쓴 컬럼 우선정렬. asc/desc 생략 시  asc적용
 SELECT * FROM author ORDER BY name, email desc;

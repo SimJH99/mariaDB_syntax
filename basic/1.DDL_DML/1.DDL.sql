@@ -43,10 +43,10 @@ SHOW INDEX FROM posts;
 -- 테이블 이름 변경
 ALTER TABLE posts RENAME post;
 
--- 컬럼추가
+-- 테이블 컬럼 추가
 ALTER TABLE author ADD COLUMN role VARCHAR(50);
 
--- 필드타입변경 (덮어쓰기)
+-- 컬럼 필드타입변경 (덮어쓰기)
 ALTER TABLE author MODIFY COLUMN name VARCHAR(100) NOT NULL;
 
 -- 컬럼 이름변경
