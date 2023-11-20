@@ -24,3 +24,12 @@ select id, title, contents,
 if(author_id = 1, 'First_author',if(author_id = 2, 'Second_author', if(author_id is null, 'anonymous', 'Etc_author'))) 
 as author_type
 from post;
+
+
+
+--if 문법 사용해서 만약 author_id가 1이면 first author 그렇지 않은 경우엔 others 출력하시오
+-- id, title, contents, author_type 형식으로 출력
+select id, title, contents,
+if(author_id = 1, 'first author', 'others') 
+as author_type
+from post;
