@@ -12,7 +12,10 @@
    
 -- - 테스트
 --   - 삭제
---     - 삭제불가
+DELETE FROM `board`.`author` WHERE (`id` = '30');     - 삭제불가
 --     - restrict와 동일
 --   - 수정
 --     -author 테이블의 id 수정시 post테이블의 id도 같이 수정
+update author set id = 30 where id = 10; --id 수정
+select * from author; --author테이블에서 id 수정 확인
+select * from post; -- post테이블에서 변경된 id가 동일하게 변경되었는지 확인
