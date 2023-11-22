@@ -8,6 +8,17 @@ FLUSH PRIVILEGES;
 
 
 
---  프로시저 실습
+-- 프로시저 실습
 -- 프로시저 네임: getUser(IN userId INT)
 -- where id = userId
+
+DELIMITER //
+CREATE PROCEDURE getUser (IN userId INT)
+BEGIN
+  SELECT * from author where id = userId;
+END //
+DELIMITER ;
+
+
+--프로시저 호출
+call getUser(5);
