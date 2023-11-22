@@ -62,8 +62,6 @@ DELIMITER ;
 
 -- author테이블에 while문을 활용하여 데이터 대량 insert
 -- 100건
-
-
 DELIMITER //
 CREATE PROCEDURE insert_text (IN p_title VARCHAR(255))
 BEGIN
