@@ -15,3 +15,5 @@ SHOW GRANTS FOR 'testuser'@'localhost';
 
 -- revoke insert 권한 제거
 revoke SELECT ON board.author FROM 'testuser'@'localhost';
+
+-- git clone 레파지토리명
