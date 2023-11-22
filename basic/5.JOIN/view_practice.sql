@@ -22,3 +22,6 @@ DELIMITER ;
 
 --프로시저 호출
 call getUser(5);
+
+--프로시저 내용 조회
+SHOW CREATE PROCEDURE 프로시저명;
