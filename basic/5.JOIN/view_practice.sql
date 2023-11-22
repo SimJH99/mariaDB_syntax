@@ -5,3 +5,9 @@ CREATE VIEW author_for_view AS SELECT name, eamil FROM author;
 CREATE USER 'testuser'@'localhost' IDENTIFIED BY 'testpw';
 GRANT SELECT ON board.author_for_view TO 'testuser'@'localhost';
 FLUSH PRIVILEGES;
+
+
+
+--  프로시저 실습
+-- 프로시저 네임: getUser(IN userId INT)
+-- where id = userId
