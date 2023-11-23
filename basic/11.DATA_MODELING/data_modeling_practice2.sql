@@ -57,6 +57,10 @@ create table order_detail
    );
 
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> e9bc5f23f35cbe1c22cef9131dceeaf877f4e3e6
 --트랜잭션 짜기
 --seller 회원가입
 --seller가 상품등록(사과, 바나나)
