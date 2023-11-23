@@ -57,7 +57,6 @@ create table order_detail
    );
 
 
-d
 --트랜잭션 짜기
 --seller 회원가입
 --seller가 상품등록(사과, 바나나)
