@@ -30,3 +30,6 @@ cd mariaDB_syntax/project/
 
 #  새로 생성한 데이터베이스에 덤프파일로 데이터베이스 복원
 mysql -u root -p board < dumpfile.sql
+
+
+# 깃클론 말고 다른 덤프 방법: scp를 활용해서 덤프하기
