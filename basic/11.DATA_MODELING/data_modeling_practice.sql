@@ -13,16 +13,10 @@
 
 
 
--- author 테이블을 나누어 author_adress 테이블추가
+-- author 테이블을 나누어 author_adress 테이블추가 (정합성을 높이기 위해 author_id에 유니크를 설정)
 create table author_address
 (id int, country varchar(255), state_city varchar(255), details varchar(255), zip_code int,
- phonenumber int, author_id int, post_id int, PRIMARY KEY (id), FOREIGN KEY (author_id) REFERENCES author(id));
-
-
--- author_id FK on delete cascade 설정 추가
- ALTER TABLE author_address 
- ADD CONSTRAINT author_id
- FOREIGN KEY(author_address_ibfk_1) REFERENCES author(id) ON delete CASCADE;
+ phonenumber int, author_id int, post_id int, PRIMARY KEY (id), FOREIGN KEY (author_id) REFERENCES author(id) on delete cascade, UNIQUE(author_id));
 
 
 
@@ -35,3 +29,10 @@ create table author_address
  PRIMARY KEY (id), 
  FOREIGN KEY (author_id) REFERENCES author(id),
  FOREIGN KEY (post_id) REFERENCES post(id));
+
+
+
+select a.name, p.title
+ from post p left join author_post ap  
+ on p.id = ap.post_id left join author a
+ on ap.author_id = a.id;
