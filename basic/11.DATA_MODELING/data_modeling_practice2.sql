@@ -24,7 +24,7 @@ create table member_info
  name varchar(255) not null,
  email varchar(255) unique,
  password varchar(255) not null,
- role enum('user', 'admin', 'sellr')
+ role enum('user', 'admin', 'seller') not null
  );
 
 -- 상품 정보 테이블 컬럼 create item_info
