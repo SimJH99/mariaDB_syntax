@@ -32,8 +32,8 @@ create table member_info
 create table item_info
  (id bigint not null auto_increment primary key,
   i_name varchar(255) unique not null,
-  price int,
-  amount int
+  price int unsigned,
+  amount int unsigned
  );
 
 -- 주문 테이블 컬럼 create order_info
@@ -50,7 +50,7 @@ create table order_detail
   (id bigint not null auto_increment primary key,
    order_id bigint not null,
    item_id bigint not null,
-   order_amount int,
+   order_amount int unsigned,
    order_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
    FOREIGN KEY (order_id) REFERENCES order_info(id),
    FOREIGN KEY (item_id) REFERENCES item_info(id)
