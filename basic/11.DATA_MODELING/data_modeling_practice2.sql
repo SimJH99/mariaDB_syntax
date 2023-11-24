@@ -51,7 +51,7 @@ create table order_detail
    order_id bigint not null,
    item_id bigint not null,
    order_amount int unsigned,
-   order_date DATETIME DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP,
+   order_date DATETIME DEFAULT CURRENT_TIMESTAMP,
    FOREIGN KEY (order_id) REFERENCES order_info(id),
    FOREIGN KEY (item_id) REFERENCES item_info(id)
    );
